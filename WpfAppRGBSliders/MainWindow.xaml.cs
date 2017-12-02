@@ -23,6 +23,28 @@ namespace WpfAppRGBSliders
         public MainWindow()
         {
             InitializeComponent();
+           
+        }
+
+        private void RSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            var brush = new SolidColorBrush(Color.FromArgb(255, (byte)RSlider.Value, (byte)GSlider.Value, (byte)BSlider.Value));
+            mijnGrid.Background = brush;
+            RLabel_Copy.Content = Convert.ToString(Math.Round(RSlider.Value));
+        }
+
+        private void GSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            var brush = new SolidColorBrush(Color.FromArgb(255, (byte)RSlider.Value, (byte)GSlider.Value, (byte)BSlider.Value));
+            mijnGrid.Background = brush;
+            GLabel_Copy.Content = Convert.ToString(Math.Round(GSlider.Value));
+        }
+
+        private void BSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            var brush = new SolidColorBrush(Color.FromArgb(255, (byte)RSlider.Value, (byte)GSlider.Value, (byte)BSlider.Value));
+            mijnGrid.Background = brush;
+            BLabel_Copy.Content = Convert.ToString(Math.Round(BSlider.Value));
         }
     }
 }
