@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppRGBSliders"
         mc:Ignorable="d"
-        Title="RGB-Sliders
-" Height="300" Width="400">
+        Title="RGB-Sliders"
+        TextBlock.TextAlignment ="Center"
+        Height="300" Width="400">
     <Grid x:Name="mijnGrid">
         <Slider x:Name="RSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="255" Margin="127,80,0,0" ValueChanged="RSlider_ValueChanged" Maximum="255" Minimum="0"/>
         <Slider x:Name="GSlider" HorizontalAlignment="Left" Height="20" Margin="127,129,0,0" VerticalAlignment="Top" Width="255" ValueChanged="GSlider_ValueChanged" Maximum="255" Minimum="0"/>
